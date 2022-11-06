@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+import "index";
+import App from "components/App";
  
 // importing css stylesheet to use the bootstrap class
 // add this line only in this file
@@ -9,8 +9,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
  
  // Use this after the variable declaration
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById("root")
 );
