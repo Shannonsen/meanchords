@@ -21,7 +21,7 @@ const Header = () => {
 
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item item-title">
-                            <Link to="/"><a class="nav-link" href="/#">MEAN CHORDS</a></Link>
+                            <Link to="/"><h5 class="h1 text-white">Mean Chords</h5></Link>
                         </li>
                     </ul>
 
