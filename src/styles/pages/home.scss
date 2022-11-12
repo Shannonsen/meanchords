@@ -1,0 +1,36 @@
+.img {
+    width: 30%;
+}
+
+.container-img {
+    width: 100px;
+    background-color: #404141;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.container-shadow{
+    background-color: #404141;
+    color: #fff;
+    opacity: .7;
+}
+
+.vinilo-text{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.cd-text{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+
+#text {
+    text-align: justify;
+}
