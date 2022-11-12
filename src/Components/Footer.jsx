@@ -2,8 +2,7 @@ import React from 'react';
 import 'styles/components/footer.scss';
 const Footer = () => {
     return (
-        <div class="d-flex flex-column h-100">
-
+        <div class="d-flex flex-column h-100 container-footer">
             <footer class="w-100 py-4 flex-shrink-0 bg-dark">
                 <div class="container py-4">
                     <div class="row gy-4 gx-5">
