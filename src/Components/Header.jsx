@@ -1,5 +1,6 @@
 import React from 'react'
 import 'styles/components/header.scss';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -8,25 +9,25 @@ const Header = () => {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item item-inicio">
-                            <a class="nav-link" aria-current="page" href="/#">INICIO</a>
+                            <Link to="/"><a class="nav-link" href="/#">INICIO</a></Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/#">CONOCENOS</a>
+                            <Link to="/about-us"><a class="nav-link" href="/#">CONOCENOS</a></Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/#">TIENDA</a>
+                            <Link to="/store"><a class="nav-link" href="/#">TIENDA</a></Link>
                         </li>
                     </ul>
 
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item item-title">
-                            <a class="nav-link" href="/#">MEAN CHORDS</a>
+                            <Link to="/"><a class="nav-link" href="/#">MEAN CHORDS</a></Link>
                         </li>
                     </ul>
 
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item item-sesion">
-                            <a class="nav-link" href="/#">INICIA SESIÓN</a>
+                            <Link to="/login"><a class="nav-link" href="/#">INICIA SESIÓN</a></Link>
                         </li>
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0">
