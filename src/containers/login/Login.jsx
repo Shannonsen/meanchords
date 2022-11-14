@@ -12,7 +12,7 @@ const Login = () => {
 				<form action="/" className="form">
 					<label className="label">Correo</label>
 					<input type="text" id="email" placeholder="Ingresa correo electrónico" className="input" />
-					<label for="password" className="label">Password</label>
+					<label for="password" className="label">Password</label> {/* Recuerda que es necesario poner una condición para mayuscula */}
 					<input type="password" id="password" placeholder="*********" className="input input-password" />
 					<input type="submit" value="Iniciar sesión" className="primary-button login-button" />
 					<Link to="/register"><input type="button" value="Registrarse" className="primary-button login-button" /></Link>
