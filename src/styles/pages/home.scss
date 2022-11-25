@@ -10,20 +10,20 @@
     text-align: center;
 }
 
-.container-shadow{
+.container-shadow {
     background-color: #404141;
     color: #fff;
     opacity: .7;
 }
 
-.vinilo-text{
+.vinilo-text {
     position: absolute;
     top: 50%;
     left: 80%;
     transform: translate(-50%, -50%);
 }
 
-.cd-text{
+.cd-text {
     position: absolute;
     top: 50%;
     left: 20%;
@@ -33,4 +33,61 @@
 
 #text {
     text-align: justify;
+}
+
+/* Productos */
+
+#title-products {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.card {
+    width: 18rem;
+}
+
+.row {
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+}
+
+#product-container {
+    text-align: center;
+    padding: 1rem;
+}
+
+#container-button-products {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+@media (max-width: 1300px) {
+    .card {
+        width: 14rem;
+    }
+}
+
+/*  about us */
+
+.container-about-us {
+    padding-top: 8rem;
+    --bs-gutter-x: none !important;
+}
+.container-about-us .img2 {
+    width: 100%;
+    height: auto;
+}
+
+#title-about-us{
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.container-info{
+    margin-left: 22rem;
+    margin-right: 22rem;
+}
+
+.container-filter{
+    filter: brightness(0.8);
 }
