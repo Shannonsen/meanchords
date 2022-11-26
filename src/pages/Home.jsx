@@ -3,7 +3,6 @@ import 'styles/pages/home.scss';
 import homeimg from 'assets/img/homeimg.png';
 import shopimg from 'assets/img/shop.png';
 import { Link } from 'react-router-dom';
-import authService from 'services/auth-services';
 
 const Home = () => {
 

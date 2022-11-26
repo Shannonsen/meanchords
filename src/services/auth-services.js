@@ -1,7 +1,7 @@
 import axios from "axios";
-
-const API_URL = "http://www.discoschowell-api.somee.com";
-
+const API_URL = "http://4ed8-131-196-246-22.ngrok.io";
+/* const API_URL = "http://www.discoschowell-api.somee.com"; */
+/* const navigate = useNavigate(); */
 const signup = (name, lastname, email, password) => {
     return axios
         .post(API_URL + '/api/User/POST', {
@@ -11,7 +11,8 @@ const signup = (name, lastname, email, password) => {
             Password: password,
         })
         .then((response) => {
-            if (response.data.accessToken) {
+            alert(response.data.status)
+            if (response.data.status) {
                 sessionStorage.setItem("user", JSON.stringify(response.data));
             }
             return response;
@@ -25,17 +26,13 @@ const login = (email, password) => {
             password,
         })
         .then((response) => {
-            if (response.Status) {
-                sessionStorage.setItem("user", JSON.stringify(response.data));
-                console.log(response.data)
-                alert("ENTRE");
-            }
+            sessionStorage.setItem("user", JSON.stringify(response.data));
+            sessionStorage.setItem("userID", JSON.stringify(response.data.Data.UserID));
             return response;
         });
 };
-
 const logout = () => {
-    localStorage.removeItem("user");
+    sessionStorage.removeItem("user");
 };
 
 const getCurrentUser = () => {
