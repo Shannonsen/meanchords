@@ -3,36 +3,47 @@ import 'styles/pages/home.scss';
 import homeimg from 'assets/img/homeimg.png';
 import shopimg from 'assets/img/shop.png';
 import { Link } from 'react-router-dom';
+import shopServices from 'services/shop-services';
+import { useState, useEffect } from 'react';
 
 const Home = () => {
-
-    const products = [
-        {
-            "id": 1,
-            "name": "Uttar Pradesh",
-            "description": "Lucknow"
-        },
-        {
-            "id": 2,
-            "name": "Gujarat",
-            "description": "Gandhinagar"
-        },
-        {
-            "id": 3,
-            "name": "Karnataka",
-            "description": "Bengaluru"
-        },
-        {
-            "id": 4,
-            "name": "Punjab",
-            "description": "Chandigarh"
-        },
-        {
-            "id": 5,
-            "name": "Maharashtra",
-            "description": "Mumbai"
+    const [Discs, setDiscs] = useState([]);
+    useEffect(() => {
+        async function fetchMyAPI() {
+            try {
+                const consulta = await shopServices.getAllDiscs();
+                console.log(JSON.parse(consulta));
+                setDiscs(JSON.parse(consulta));
+            } catch (error) {
+                console.log(error)
+            }
         }
-    ]
+        fetchMyAPI();
+    }, []);
+
+    /*      const handle = async (e) => {
+           e.preventDefault();
+           try {
+               await authService.getUser2();
+           } catch (err) {
+               alert(err)
+           }
+       };
+    */
+    /*       const handle = async (e) => {
+            e.preventDefault();
+            try {
+                await authService.getUser(1).then(
+                    () => {
+                    },
+                    (error) => {
+                        alert(error)
+                    }
+                );
+            } catch (err) {
+                alert(err)
+            }
+        }; */
 
     return (
         <div>
@@ -46,13 +57,13 @@ const Home = () => {
             <div class="container-fluid text-center container-newproducts">
                 <h2 id="title-products">NUEVOS PRODUCTOS</h2>
                 <div class="row">
-                    {products.map((product) => {
+                    {Discs.map((product) => {
                         return (
                             <div class="col-lg-3 col-md-4 col-sm-6" id="product-container">
                                 <div class="card">
                                     <img src="https://cdn.akamai.steamstatic.com/steam/apps/1150690/capsule_616x353.jpg?t=1655277094" class="card-img-top" alt="..." />
                                     <div class="card-body">
-                                        <p class="card-text">{product.name}</p>
+                                        <p class="card-text">{product.Name}</p>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +72,7 @@ const Home = () => {
                 </div>
                 <div class="row">
                     <div class="col-4"></div>
-                    <div class="col-4" id="container-button-products"><Link to="/register"><input type="button" value="Ver productos" className="primary-button login-button" /></Link></div>
+                        <div class="col-4" id="container-button-products"><input type="submit" value="Ver productos" className="primary-button login-button" /></div>
                     <div class="col-4"></div>
                 </div>
             </div>

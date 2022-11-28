@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "http://701f-131-196-246-22.ngrok.io";
+const API_URL = "http://localhost:8082";
 /* const API_URL = "http://www.discoschowell-api.somee.com"; */
 /* const navigate = useNavigate(); */
 const signup = (name, lastname, email, password) => {
@@ -19,17 +19,17 @@ const signup = (name, lastname, email, password) => {
         });
 };
 
-/* const getUser = (idUser) => {
+const getUser = (idUser) => {
     return axios
-    .get(API_URL + '/api/User',{ params: {
-        UserId: idUser
-    }
-    })
-    .then((response) => {
-        sessionStorage.setItem("user2", JSON.stringify(response.data));
-        return response;
-    });
-} */
+        .get(API_URL + '/api/User/GET', {
+            params: {
+                UserId: idUser
+            }
+        })
+        .then((response) => {
+            return response;
+        });
+}
 
 const login = (email, password) => {
     return axios
@@ -57,7 +57,7 @@ const authService = {
     login,
     logout,
     getCurrentUser,
-   /*  getUser, */
+    getUser,
 }
 
 export default authService;

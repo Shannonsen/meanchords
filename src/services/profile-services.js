@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "http://701f-131-196-246-22.ngrok.io";
+const API_URL = "http://localhost:8082";
 
 const editprofile = (name, lastname, email, newemail, password, newpassword) => {
     return axios
