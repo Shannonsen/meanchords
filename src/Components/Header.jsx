@@ -35,7 +35,7 @@ const Header = () => {
                             <div>
                                 <ul class="navbar-nav mb-2 mb-lg-0">
                                     <li class="nav-item item-sesion">
-                                        <Link to="/"><a class="nav-link" href="/#">HOLA! {sessionStorage.getItem('userID')}</a></Link>
+                                        <Link to="/profile"><a class="nav-link" href="/#">HOLA! {JSON.parse(sessionStorage.getItem('user')).Name}</a></Link>
                                     </li>
                                 </ul>
                             </div>

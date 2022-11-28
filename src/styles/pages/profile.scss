@@ -1,0 +1,29 @@
+@import '../var.scss'; 
+
+.form-profile{
+	width: 50% !important;
+}
+
+.form-profile{
+    border: black;
+    margin:5rem;
+}
+
+.primary-button2 {
+	text-align: center;
+	text-decoration: none;
+	background-color: var(--black);
+	border-radius: 8px;
+	border: none;
+	color: var(--white);
+	width: 25%;
+	cursor: pointer;
+	font-size: var(--md);
+	font-weight: bold;
+	height: 40px;
+}
+
+.edit-button{
+	margin-left: 20px;
+}
+
