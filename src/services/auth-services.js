@@ -1,7 +1,7 @@
 import axios from "axios";
-
-const API_URL = "http://www.discoschowell-api.somee.com";
-
+const API_URL = "http://localhost:8082";
+/* const API_URL = "http://www.discoschowell-api.somee.com"; */
+/* const navigate = useNavigate(); */
 const signup = (name, lastname, email, password) => {
     return axios
         .post(API_URL + '/api/User/POST', {
@@ -11,12 +11,25 @@ const signup = (name, lastname, email, password) => {
             Password: password,
         })
         .then((response) => {
-            if (response.data.accessToken) {
+            alert(response.data.status)
+            if (response.data.status) {
                 sessionStorage.setItem("user", JSON.stringify(response.data));
             }
             return response;
         });
 };
+
+const getUser = (idUser) => {
+    return axios
+        .get(API_URL + '/api/User/GET', {
+            params: {
+                UserId: idUser
+            }
+        })
+        .then((response) => {
+            return response;
+        });
+}
 
 const login = (email, password) => {
     return axios
@@ -25,17 +38,14 @@ const login = (email, password) => {
             password,
         })
         .then((response) => {
-            if (response.Status) {
-                sessionStorage.setItem("user", JSON.stringify(response.data));
-                console.log(response.data)
-                alert("ENTRE");
-            }
+            sessionStorage.setItem("userID", JSON.stringify(response.data.Data.UserID));
+            sessionStorage.setItem("user", JSON.stringify(response.data.Data.User));
             return response;
         });
 };
 
 const logout = () => {
-    localStorage.removeItem("user");
+    sessionStorage.removeItem("user");
 };
 
 const getCurrentUser = () => {
@@ -47,6 +57,7 @@ const authService = {
     login,
     logout,
     getCurrentUser,
+    getUser,
 }
 
 export default authService;
