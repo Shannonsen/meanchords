@@ -1,0 +1,56 @@
+
+.container-initial{
+    padding-top:3rem;
+    text-align: center;
+}
+
+.container-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container-car{
+    margin-top: 3rem;
+}
+.container-img-car{
+    height: 12rem;
+    width: 1rem;
+    background-color: white;
+}
+
+.container-img-car img{
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 12rem;
+    display: block;
+}
+
+#img-disc{
+    border: double;
+    border: 0.5rem solid;
+}
+.container-name{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.container-description{
+    padding:0;
+    font-size: 0.9rem;
+}
+
+.container-price{
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.button-buy{
+    margin-top: 3rem;
+    width: 30%;
+}
+
+.button-delete{
+    margin-top: 1rem;
+    width: 10%;
+}

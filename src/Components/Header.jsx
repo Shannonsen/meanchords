@@ -43,7 +43,7 @@ const Header = () => {
                     </div>
                     <ul className="navbar-nav mb-2 mb-lg-0">
                         <li className="nav-item item-icon">
-                        <Link to="/profile"><img id="shopping-cart" src="https://cdn.iconscout.com/icon/free/png-256/shopping-cart-442-1151214.png" alt="carrito" /></Link>
+                        <Link to="/shoppingCar"><img id="shopping-cart" src="https://cdn.iconscout.com/icon/free/png-256/shopping-cart-442-1151214.png" alt="carrito" /></Link>
                         </li>
                     </ul>
                 </div>

@@ -22,12 +22,15 @@ const getDisc = (id) => {
         });
 };
 
-const getShoppingCart = () => {
+const getShoppingCart = (idUser) => {
     return axios
-        .get(API_URL + '/api/ShoppingCar/GET')
+        .get(API_URL + '/api/ShoppingCar/GET', {
+            params: {
+                UserId: idUser
+            }
+        })
         .then((response) => {
-            console.log(response.data)
-            return response;
+            return JSON.stringify(response.data.Data.WishList);
         });
 };
 

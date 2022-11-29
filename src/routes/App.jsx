@@ -10,6 +10,7 @@ import Store from 'pages/Store';
 import AboutUs from 'pages/AboutUs';
 import Profile from 'pages/Profile';
 import Details from 'pages/Details';
+import Car from 'pages/Car';
 /* css */
 import 'styles/global.css';
 
@@ -25,6 +26,7 @@ const App = () => {
                     <Route exact path="/about-us" element={<AboutUs />}></Route>
                     <Route exact path="/profile" element= {<Profile />} />
                     <Route path="/detail/:id" element={<Details/>}></Route>
+                    <Route exact path="/shoppingCar" element= {<Car/>} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Layout>
