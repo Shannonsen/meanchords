@@ -9,6 +9,7 @@ import Home from 'pages/Home';
 import Store from 'pages/Store';
 import AboutUs from 'pages/AboutUs';
 import Profile from 'pages/Profile';
+import Details from 'pages/Details';
 /* css */
 import 'styles/global.css';
 
@@ -23,6 +24,7 @@ const App = () => {
                     <Route exact path="/store" element={<Store />}></Route>
                     <Route exact path="/about-us" element={<AboutUs />}></Route>
                     <Route exact path="/profile" element= {<Profile />} />
+                    <Route path="/detail/:id" element={<Details/>}></Route>
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Layout>

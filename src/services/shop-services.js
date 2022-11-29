@@ -18,7 +18,7 @@ const getDisc = (id) => {
         })
         .then((response) => {
             console.log(response.data)
-            return response;
+            return JSON.stringify(response.data.Data);
         });
 };
 
@@ -30,6 +30,18 @@ const getShoppingCart = () => {
             return response;
         });
 };
+
+const postShoppingCart = (userId, discId) => {
+    return axios
+    .post(API_URL + '/api/ShoppingCar/POST', {
+        UserId: userId,
+        DiscId: discId,
+    })
+    .then((response) => {
+        return response;
+    });
+}
+
 
 const getAllCategories = () => {
     return axios
@@ -45,6 +57,7 @@ const shopServices = {
     getDisc,
     getShoppingCart,
     getAllCategories,
+    postShoppingCart,
 }
 
 export default shopServices;

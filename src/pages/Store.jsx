@@ -3,9 +3,9 @@ import shopimg from 'assets/img/discs.jpg';
 import 'styles/pages/store.scss';
 const Store = () => {
     return (
-        <div class ="container-fluid container-store">
-        <div class="container-filter">
-            <img src={shopimg} class="img2" alt="CD" />
+        <div className ="container-fluid container-store">
+        <div className="container-filter">
+            <img src={shopimg} className="img2" alt="CD" />
         </div>
         </div>
     );

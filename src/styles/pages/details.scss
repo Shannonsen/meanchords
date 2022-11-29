@@ -1,0 +1,56 @@
+@import '../var.scss'; 
+
+.container-details{
+    margin-top: 3rem;
+}
+
+.container-img{
+    height: 30rem;
+    width: 1rem;
+    background-color: white;
+}
+
+.container-img img{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+#img-disc{
+    border: double;
+    border: 0.5rem solid;
+}
+
+.container{
+    text-align: left;
+}
+
+.container-name{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.container-description{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.container-price{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.badge{
+    margin: 0.3rem;
+    font-size: 1rem;
+}
+
+form{
+    padding-top:1rem;
+}
+
+.button-carrito{
+    width: 40%;
+}
