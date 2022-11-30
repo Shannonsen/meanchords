@@ -38,7 +38,7 @@ const Login = () => {
 					<input type="text" id="email" placeholder="Ingresa correo electrónico" onChange={(e) => setEmail(e.target.value)} className="input" />
 					<label for="password" className="label">Password</label>
 					<input type="password" id="password" placeholder="*********" onChange={(e) => setPassword(e.target.value)} className="input input-password" />
-					<button type="submit">Continuar</button>
+					<button type="submit" className="primary-button login-button">Continuar</button>
 					<Link to="/register"><input type="button" value="Registrarse" className="primary-button login-button" /></Link>
 				</form>
 			</div>

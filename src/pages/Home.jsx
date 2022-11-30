@@ -50,7 +50,7 @@ const Home = () => {
                 </div>
                 <div className="row">
                     <div className="col-4"></div>
-                    <div className="col-4" id="container-button-products"><input type="submit" value="Ver productos" className="primary-button login-button" /></div>
+                    <div className="col-4" id="container-button-products"><Link to={"/store"}><input value="Ver productos" className="primary-button login-button" /></Link></div>
                     <div className="col-4"></div>
                 </div>
             </div>

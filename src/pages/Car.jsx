@@ -4,18 +4,26 @@ import shopServices from 'services/shop-services';
 import 'styles/pages/car.scss';
 const Car = () => {
     const [Car, setCar] = useState([]);
+    const [Total, setTotal] = useState(0);
     useEffect(() => {
         async function fetchMyAPI() {
             try {
                 const consulta = await shopServices.getShoppingCart(sessionStorage.getItem('userID'));
                 console.log(JSON.parse(consulta));
                 setCar(JSON.parse(consulta));
+                let totalCount = 0;
+                JSON.parse(consulta).forEach((el) => {
+                    totalCount = totalCount + Number(el.Price);
+                })
+                setTotal(totalCount);
+                sessionStorage.setItem("total-car", JSON.stringify(totalCount));
             } catch (error) {
                 console.log(error)
             }
         }
         fetchMyAPI();
     }, []);
+
 
     return (
         <div className="container-initial">
@@ -37,6 +45,12 @@ const Car = () => {
                     </div>
                 );
             })}
+            <div>
+                <h4>Total: ${Total}</h4>
+            </div>
+            <div class="alert alert-light" role="alert">
+                El precio total aún no contempla en envió.
+            </div>
             <button type="submit" className="primary-button button-buy">PAGAR</button>
         </div>
     );

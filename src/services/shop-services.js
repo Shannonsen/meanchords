@@ -51,7 +51,31 @@ const getAllCategories = () => {
     .get(API_URL + '/api/Category/GET')
     .then((response) => {
         console.log(response.data)
-        return response;
+        return JSON.stringify(response.data.Data);
+    });
+}
+
+const getByCategory = (idCategory) => {
+    return axios
+    .get(API_URL + '/api/Disc/GETBYCATEGORY', {
+        params: {
+            CategoryId: idCategory
+        }
+    })
+    .then((response) => {
+        return JSON.stringify(response.data.Data);
+    });
+}
+
+const getByTitle = (title) => {
+    return axios
+    .get(API_URL + '/api/Disc/GETBYTITLE', {
+        params: {
+            Title: title
+        }
+    })
+    .then((response) => {
+        return JSON.stringify(response.data.Data);
     });
 }
 
@@ -61,6 +85,8 @@ const shopServices = {
     getShoppingCart,
     getAllCategories,
     postShoppingCart,
+    getByCategory,
+    getByTitle,
 }
 
 export default shopServices;
