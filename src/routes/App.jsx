@@ -13,10 +13,28 @@ import Details from 'pages/Details';
 import Car from 'pages/Car';
 /* css */
 import 'styles/global.css';
+import AdminLayout from 'containers/AdminLayout';
+import ControlPanel from 'pages/ControlPanel';
 
 const App = () => {
-    return (
-        <BrowserRouter>
+
+    // const user = authService.getCurrentUser() | null;
+    // let isActiveAdmin = sessionStorage.getItem('isa') || false;
+    let layout;
+    if(true){
+        layout = 
+            <AdminLayout>
+                <Routes>
+                    <Route exact path="/panel" element={<ControlPanel />}></Route>
+                    <Route exact path="/a/pedidos" element={<ControlPanel />}></Route>
+                    <Route exact path="/a/discos" element={<ControlPanel />}></Route>
+                    <Route exact path="/a/reportes" element={<ControlPanel />}></Route>
+                    <Route exact path="/" element={<ControlPanel />}></Route>
+                </Routes>
+            </AdminLayout>
+    }
+    else{
+        layout = 
             <Layout>
                 <Routes>
                     <Route exact path="/" element={<Home />}></Route>
@@ -30,6 +48,13 @@ const App = () => {
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Layout>
+        console.log();
+    }
+
+
+    return (
+        <BrowserRouter>
+            {layout}
         </BrowserRouter >
     );
 }
