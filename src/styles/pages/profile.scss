@@ -1,12 +1,12 @@
-@import '../var.scss'; 
+@import '../var.scss';
 
-.form-profile{
+.form-profile {
 	width: 50% !important;
 }
 
-.form-profile{
-    border: black;
-    margin:5rem;
+.form-profile {
+	border: black;
+	margin: 5rem;
 }
 
 .primary-button2 {
@@ -23,7 +23,20 @@
 	height: 40px;
 }
 
-.edit-button{
+.edit-button {
+	margin-top: 20px;
 	margin-left: 20px;
 }
 
+
+.container-card-address {
+	padding-left: 5rem;
+}
+
+.container-card-address-individual {
+	padding-top: 2rem;
+}
+
+.card-address {
+	padding: 1rem;
+}
