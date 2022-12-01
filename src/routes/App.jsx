@@ -15,6 +15,8 @@ import Car from 'pages/Car';
 import 'styles/global.css';
 import AdminLayout from 'containers/AdminLayout';
 import ControlPanel from 'pages/ControlPanel';
+import DiscPanel from 'pages/DiscPanel';
+import AddDisc from 'pages/AddDisc';
 
 const App = () => {
 
@@ -27,7 +29,9 @@ const App = () => {
                 <Routes>
                     <Route exact path="/panel" element={<ControlPanel />}></Route>
                     <Route exact path="/a/pedidos" element={<ControlPanel />}></Route>
-                    <Route exact path="/a/discos" element={<ControlPanel />}></Route>
+                    <Route exact path="/a/discos" element={<DiscPanel />}></Route>
+                    <Route exact path="/a/discos/add" element={<AddDisc />}></Route>
+                    <Route exact path="/a/discos/edit/:id" element={<AddDisc />}></Route>
                     <Route exact path="/a/reportes" element={<ControlPanel />}></Route>
                     <Route exact path="/" element={<ControlPanel />}></Route>
                 </Routes>

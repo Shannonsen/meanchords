@@ -1,0 +1,16 @@
+.content{
+  // margin: 1rem 0 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add-disc{
+  display: flex;
+  align-items:baseline;
+  justify-content: right;
+  font-size: 22px;
+  margin-bottom: 15px;
+}

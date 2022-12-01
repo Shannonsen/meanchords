@@ -5,7 +5,7 @@ const AdminLayout = ({ children }) => {
 	return (
 		<div className="contadmin">
       <NavigationMenu />
-			<div className="Layout">
+			<div className="c">
 				{children}
 			</div>
 		</div>
