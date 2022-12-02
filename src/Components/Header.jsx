@@ -25,7 +25,7 @@ const Header = ({admin}) => {
 
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item item-title">
-                            <Link to="/"><h5 className="h1 text-white">Mean Chords</h5></Link>
+                            <Link to="/"><h5 className="h1 text-white">Discos Chowell</h5></Link>
                         </li>
                     </ul>
 

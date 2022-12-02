@@ -26,6 +26,17 @@ const Car = () => {
     }, []);
 
 
+    const deleteDisc = async(e, idDisc) =>{
+        const iduser = Number(sessionStorage.getItem('userID'));
+        console.log(typeof(idDisc), typeof(iduser))
+        e.preventDefault();
+        try {
+           await shopServices.deleteShoppingCart(9,1);
+        } catch (err) {
+            alert(err)
+        }
+    };
+
     return (
         <div className="container-initial">
             <div className="container-title">TU CARRITO</div>
@@ -40,7 +51,9 @@ const Car = () => {
                                 <div className="container-name"> {attributes.Name}</div>
                                 <div className="container-description"> {attributes.Author?.FullName} {attributes.Author?.ShortName}</div>
                                 <div className="container-price"> {"$" + attributes.Price + " MXN"}</div>
-                                <button type="submit" className="btn btn-danger button-delete">eliminar</button>
+                                <form action="">
+                                <button type="text" onClick={(e) => deleteDisc(e,attributes.DiscId)} className="btn btn-danger button-delete">eliminar</button>
+                                </form>
                             </div>
                         </div>
                     </div>
