@@ -16,13 +16,14 @@
   background-color: #1f1f1f;
 }
 
-// ul {
-//   justify-content: center;
-//   align-items: center;
-// }
 
 .line {
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: var(--black);
+}
+
+.img-w {
+  width: 15%;
+  margin-right: 10px;
 }

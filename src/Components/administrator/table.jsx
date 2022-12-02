@@ -1,7 +1,9 @@
 const Table = (props) => {
   const {data, ...elements} = props
 
-  if(!data.length) return <h3>Loading!</h3>
+  if(!data.length) return <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
 
   return (
     <div className="w-75">

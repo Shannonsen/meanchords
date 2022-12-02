@@ -40,16 +40,24 @@ const login = (email, password) => {
         .then((response) => {
             sessionStorage.setItem("userID", JSON.stringify(response.data.Data.UserID));
             sessionStorage.setItem("user", JSON.stringify(response.data.Data.User));
+            sessionStorage.setItem("userR", JSON.stringify(response.data.Data.UserType));
+
             return response;
         });
 };
 
 const logout = () => {
     sessionStorage.removeItem("user");
+    sessionStorage.removeItem("userR");
+    sessionStorage.removeItem("userID");
 };
 
 const getCurrentUser = () => {
     return JSON.parse(sessionStorage.getItem("user"));
+}
+
+const getCurrentUserRol = () => {
+    return JSON.parse(sessionStorage.getItem("userR"));
 }
 
 const authService = {
@@ -58,6 +66,7 @@ const authService = {
     logout,
     getCurrentUser,
     getUser,
+    getCurrentUserRol,
 }
 
 export default authService;

@@ -1,8 +1,12 @@
 import React from 'react'
 import 'styles/components/header.scss';
 import { Link } from 'react-router-dom';
+import authService from 'services/auth-services';
 
-const Header = () => {
+const Header = ({admin}) => {
+
+    console.log(admin);
+
     return (
         <nav className="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-dark">
             <div className="container-fluid">
@@ -41,6 +45,15 @@ const Header = () => {
                             </div>
                         }
                     </div>
+                    {authService.getCurrentUserRol() === 1 ? 
+                        <ul className="navbar-nav mb-2 mb-lg-0">
+                            <li className="nav-item item-icon">
+                                <Link to="/panel" onClick={() => admin(true)} >Panel</Link>
+                            </li>
+                        </ul>
+                        :
+                        null
+                    }
                     <ul className="navbar-nav mb-2 mb-lg-0">
                         <li className="nav-item item-icon">
                         <Link to="/shoppingCar"><img id="shopping-cart" src="https://cdn.iconscout.com/icon/free/png-256/shopping-cart-442-1151214.png" alt="carrito" /></Link>
