@@ -11,6 +11,8 @@ import AboutUs from 'pages/AboutUs';
 import Profile from 'pages/Profile';
 import Details from 'pages/Details';
 import Car from 'pages/Car';
+import Buy  from 'pages/Buy';
+import SucessfullBuy from 'pages/SucessfullBuy';
 /* css */
 import 'styles/global.css';
 import AdminLayout from 'containers/AdminLayout';
@@ -55,6 +57,8 @@ const App = () => {
                     <Route exact path="/profile" element= {<Profile />} />
                     <Route path="/detail/:id" element={<Details/>}></Route>
                     <Route exact path="/shoppingCar" element= {<Car/>} />
+                    <Route exact path="/buyproducts" element= {<Buy/>} />
+                    <Route path="/sucessBuy" element={<SucessfullBuy />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Layout>

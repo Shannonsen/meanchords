@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import shopServices from 'services/shop-services';
 import 'styles/pages/car.scss';
+import { Link } from 'react-router-dom';
 const Car = () => {
     const [Car, setCar] = useState([]);
     const [Total, setTotal] = useState(0);
@@ -51,7 +52,9 @@ const Car = () => {
             <div class="alert alert-light" role="alert">
                 El precio total aún no contempla en envió.
             </div>
-            <button type="submit" className="primary-button button-buy">PAGAR</button>
+            <Link to={"/buyproducts"}>
+            <button className="primary-button button-buy">PAGAR</button>
+            </Link>
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import axios from "axios";
 const API_URL = "http://localhost:8082";
+/* const API_URL = "http://a7be-131-196-246-22.ngrok.io";  */
 
 const getAllDiscs = () => {
     return axios
@@ -79,6 +80,19 @@ const getByTitle = (title) => {
     });
 }
 
+const postSale = (total, delivery,address, user) => {
+    return axios
+        .post(API_URL + '/api/Sale/POST', {
+            Total: total,
+            DeliveryService: delivery,
+            AddressId: address,
+            UserId: user,
+        })
+        .then((response) => {
+            return response.data;
+        });
+};
+
 const shopServices = {
     getAllDiscs,
     getDisc,
@@ -87,6 +101,7 @@ const shopServices = {
     postShoppingCart,
     getByCategory,
     getByTitle,
+    postSale,
 }
 
 export default shopServices;
