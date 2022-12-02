@@ -17,15 +17,21 @@ import AdminLayout from 'containers/AdminLayout';
 import ControlPanel from 'pages/ControlPanel';
 import DiscPanel from 'pages/DiscPanel';
 import AddDisc from 'pages/AddDisc';
+import authService from 'services/auth-services';
+import { useState } from 'react';
 
 const App = () => {
+    const [isAdminActive, setAdminActivity] = useState(false);
+    const user = authService.getCurrentUserRol() || 2;
 
-    // const user = authService.getCurrentUser() | null;
-    // let isActiveAdmin = sessionStorage.getItem('isa') || false;
+    const onChangeA = (state) => {
+        setAdminActivity(state)
+    }
+
     let layout;
-    if(true){
+    if(user === 1 && isAdminActive){
         layout = 
-            <AdminLayout>
+            <AdminLayout admin={onChangeA}>
                 <Routes>
                     <Route exact path="/panel" element={<ControlPanel />}></Route>
                     <Route exact path="/a/pedidos" element={<ControlPanel />}></Route>
@@ -39,7 +45,7 @@ const App = () => {
     }
     else{
         layout = 
-            <Layout>
+            <Layout admin={onChangeA}>
                 <Routes>
                     <Route exact path="/" element={<Home />}></Route>
                     <Route exact path="/login" element={<Login />} />

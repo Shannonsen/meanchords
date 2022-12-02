@@ -1,10 +1,10 @@
 import NavigationMenu from "Components/administrator/NavigationMenu";
 import 'styles/components/adminLayout.scss'
 
-const AdminLayout = ({ children }) => {
+const AdminLayout = ({ children, admin }) => {
 	return (
 		<div className="contadmin">
-      <NavigationMenu />
+      <NavigationMenu admin={admin}/>
 			<div className="c">
 				{children}
 			</div>

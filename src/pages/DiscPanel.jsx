@@ -3,6 +3,9 @@ import Table from "Components/administrator/table";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import deleteImg from "../assets/img/delete-a.png"
+import editImg from "../assets/img/edit-a.png"
+
 import '../styles/pages/discPanel.scss'
 
 const DiscPanel = () => {
@@ -24,17 +27,25 @@ const DiscPanel = () => {
     }, []);
 
     const edit = (id) => {
-      return <Link to={`/a/discos/edit/${id}`} ><a href="/" className="btn btn-primary">Edit</a></Link>
+      return <Link to={`/a/discos/edit/${id}`} >
+        <a href="/" className="btn btn-primary ">
+          <img id="panel"className="img-wd"  src={editImg} alt="Editar" />
+        </a>
+      </Link>
     }
     
     const deleteDisc = (id) => {
-      return <Link to={`/a/discos/`} ><a href="/" className="btn btn-danger">Delete</a></Link>
+      return <Link to={`/a/discos/`} >
+        <a href="/" className="btn btn-danger">
+          <img id="panel"className="img-wd"  src={deleteImg} alt="Eliminar" />
+        </a>
+      </Link>
     }
 
   return (
     <>
     <div className="content ">
-      <h3>Discos Manager</h3>
+      <h3>Administrar Discos</h3>
       <div className="add-disc w-75">
         <label className="mx-2">Agregar disco: </label>
         <Link to="/a/discos/add" ><a href="/" className="btn btn-success">Agregar</a></Link>
