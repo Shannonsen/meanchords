@@ -21,26 +21,29 @@ import DiscPanel from 'pages/DiscPanel';
 import AddDisc from 'pages/AddDisc';
 import authService from 'services/auth-services';
 import { useState } from 'react';
+import SalesPanel from 'pages/SalesPanel';
+import ReportPanel from 'pages/ReportPanel';
 
 const App = () => {
-    const [isAdminActive, setAdminActivity] = useState(false);
+    const [isAdminActive, setAdminActivity] = useState(sessionStorage.getItem("state") || false);
     const user = authService.getCurrentUserRol() || 2;
 
     const onChangeA = (state) => {
+        sessionStorage.setItem("state", state)
         setAdminActivity(state)
     }
-
+    console.log("Log", isAdminActive, user);
     let layout;
     if(user === 1 && isAdminActive){
         layout = 
             <AdminLayout admin={onChangeA}>
                 <Routes>
                     <Route exact path="/panel" element={<ControlPanel />}></Route>
-                    <Route exact path="/a/pedidos" element={<ControlPanel />}></Route>
+                    <Route exact path="/a/pedidos" element={<SalesPanel />}></Route>
                     <Route exact path="/a/discos" element={<DiscPanel />}></Route>
                     <Route exact path="/a/discos/add" element={<AddDisc />}></Route>
                     <Route exact path="/a/discos/edit/:id" element={<AddDisc />}></Route>
-                    <Route exact path="/a/reportes" element={<ControlPanel />}></Route>
+                    <Route exact path="/a/reportes" element={<ReportPanel />}></Route>
                     <Route exact path="/" element={<ControlPanel />}></Route>
                 </Routes>
             </AdminLayout>

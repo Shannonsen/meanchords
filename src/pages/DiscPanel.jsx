@@ -55,5 +55,5 @@ const DiscPanel = () => {
     </>
   )
 }
-
+// fecha de venta, 
 export default DiscPanel;
