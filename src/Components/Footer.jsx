@@ -7,8 +7,8 @@ const Footer = () => {
                 <div className="container py-4">
                     <div className="row gy-4 gx-5">
                         <div className="col-lg-4 col-md-6">
-                            <h5 className="h1 text-white">Mean Chords</h5>
-                            <p className="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <h5 className="h1 text-white">Discos Chowell</h5>
+                            <p className="small text-muted"></p>
                             <p className="small text-muted mb-0">&copy; Copyrights. All rights reserved.</p>
                         </div>
                         <div className="col-lg-2 col-md-6">
@@ -28,7 +28,8 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-4 col-md-6">
                             <h5 className="text-white mb-3">Mantente en contacto</h5>
-                            <p className="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <p className="small text-muted">(999)123 287.</p>
+                            <p className="small text-muted">Discoschowell@discos.com.mx</p>
                         </div>
                     </div>
                 </div>

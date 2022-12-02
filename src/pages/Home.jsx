@@ -11,7 +11,7 @@ const Home = () => {
     useEffect(() => {
         async function fetchMyAPI() {
             try {
-                const consulta = await shopServices.getAllDiscs();
+                const consulta = await shopServices.getQuantyDisc(4);
                 console.log(JSON.parse(consulta));
                 setDiscs(JSON.parse(consulta));
             } catch (error) {
@@ -61,12 +61,13 @@ const Home = () => {
                 <h2 id="title-about-us">¿QUIÉNES SOMOS?</h2>
                 <div className="container-info">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia animi pariatur reiciendis beatae porro corporis eveniet itaque, hic vitae! Delectus asperiores laudantium fugiat illo, eius dolor totam aut. Porro, qui.
+                        Discos chowell es el paraíso de los vinilos con precios totalmente accesibles, No hace mucho que los discos
+                         de acetato se pusieron de nuevo en el lente de los melómanos, actualmente encuentras más de una tienda que se dedica a su venta, pero hay algunas que llevan un buen rato en el mercado. Discos Chowell es una de ellas. Esta pequeña tienda cuenta con un amplio catálogo, así que encontrarás de todos los géneros, desde pop, jazz, tecno, rock, metal y hasta música clásica.
                     </p>
                 </div>
                 <div className="row">
                     <div className="col-4"></div>
-                    <div className="col-4" id="container-button-products"><Link to="/register"><input type="button" value="Conocenos" className="primary-button login-button" /></Link></div>
+                    <div className="col-4" id="container-button-products"><Link to="/about-us"><input type="button" value="Conocenos" className="primary-button login-button" /></Link></div>
                     <div className="col-4"></div>
                 </div>
             </div>
