@@ -88,7 +88,6 @@ const Profile = () => {
     return (
         <div>
             <form onSubmit={editProfile} className="form-profile">
-
                 <label for="exampleInputEmail1" className="form-label">Nombre</label>
                 <input type="text" className="form-control" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} />
 
