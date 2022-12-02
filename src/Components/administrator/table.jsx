@@ -1,9 +1,12 @@
 const Table = (props) => {
   const {data, ...elements} = props
+  
+  if(data === undefined) return <h3>No hay datos disponibles</h3>
 
   if(!data.length) return <div class="spinner-border" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
+
 
   return (
     <div className="w-75">
