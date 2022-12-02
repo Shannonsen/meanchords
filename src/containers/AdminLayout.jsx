@@ -1,4 +1,4 @@
-import NavigationMenu from "Components/administrator/NavigationMenu";
+import NavigationMenu from "components/administrator/NavigationMenu";
 import 'styles/components/adminLayout.scss'
 
 const AdminLayout = ({ children, admin }) => {

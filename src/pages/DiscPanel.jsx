@@ -1,10 +1,10 @@
 import shopServices from "services/shop-services";
-import Table from "Components/administrator/table";
+import Table from "components/administrator/table";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import deleteImg from "../assets/img/delete-a.png"
-import editImg from "../assets/img/edit-a.png"
+import deleteImg from "assets/img/delete-a.png"
+import editImg from "assets/img/edit-a.png"
 
 import '../styles/pages/discPanel.scss'
 
